@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 
 
-export default usersReducer = (state = {}, action) => {
+const usersReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
 
@@ -14,3 +14,5 @@ export default usersReducer = (state = {}, action) => {
       return state;
   }
 }
+
+export default usersReducer;

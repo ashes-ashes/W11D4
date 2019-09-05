@@ -6,5 +6,3 @@ export const fetchBenches = () => {
         error: (err) => console.log(err)
     })
 }
-
-window.fetchBenches = fetchBenches

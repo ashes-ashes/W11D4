@@ -8,8 +8,11 @@ const mapStateToProps = (state) => ({
     benches: state.entities.benches
 });
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = (dispatch) => ({
     fetchBenches: () => dispatch(fetchBenches())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BenchIndex)
+export default connect(
+    mapStateToProps, 
+    mapDispatchToProps
+)(BenchIndex);

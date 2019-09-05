@@ -14,5 +14,3 @@ export const fetchBenches = () => dispatch => (
             (err) => dispatch(receiveSessionErrors(err.responseJSON))
         )
 );
-
-window.fetchBenches = fetchBenches;
