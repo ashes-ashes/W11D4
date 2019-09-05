@@ -10,6 +10,9 @@ import Root from "./components/root";
 // –––testing–––
 // import { signup, login, logout } from './util/session_api_util';
 import { signup, login, logout } from './actions/session_actions';
+// import { fetchBenches } from './util/bench_api_util';
+import { fetchBenches } from './actions/bench_actions';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -25,8 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);
+
+  //--testing--//
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  //--testing--//
 });
